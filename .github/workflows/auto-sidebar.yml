@@ -5,12 +5,16 @@ on:
     branches:
       - main
     paths:
-      - '**.md'
+      - '*.md'
+      - '**/*.md'
       - '!_sidebar.md'
 
 # 强制该工作流使用 Node.js 24 运行环境，消除过时警告
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -22,18 +26,45 @@ jobs:
 
       - name: Generate Sidebar
         run: |
-          echo "* [首页](README.md)" > _sidebar.md
-          # 扫描并排序所有 md 文件
-          find . -maxdepth 2 -name "*.md" ! -name "README.md" ! -name "_*" | sort | while read -r file; do
-            clean_file=$(echo "$file" | sed 's|^\./||')
-            title=$(basename "$clean_file" .md)
-            echo "  * [$title]($clean_file)" >> _sidebar.md
-          done
+          {
+            echo "* **总索引**"
+            echo "  * [首页入口](README.md)"
+            echo
+
+            current_dir=""
+            find . -type f -name "*.md" ! -name "README.md" ! -name "_*" | sort | while read -r file; do
+              clean_file=$(echo "$file" | sed 's|^\./||')
+              dir=$(dirname "$clean_file")
+              title=$(basename "$clean_file" .md)
+
+              if [ "$dir" != "$current_dir" ]; then
+                if [ -n "$current_dir" ]; then
+                  echo
+                fi
+
+                if [ "$dir" = "." ]; then
+                  section_title="根目录文档"
+                else
+                  section_title="$dir"
+                fi
+
+                echo "* **$section_title**"
+                current_dir="$dir"
+              fi
+
+              echo "  * [$title]($clean_file)"
+            done
+          } > _sidebar.md
 
       - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _sidebar.md
-          # 检查是否有文件更改，避免空提交报错
-          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: auto update sidebar" && git push)
+          # 只在 _sidebar.md 真有变化时提交，避免空提交报错
+          if git diff --cached --quiet -- _sidebar.md; then
+            echo "No sidebar changes to commit"
+          else
+            git commit -m "docs: auto update sidebar"
+            git push
+          fi
