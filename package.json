@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "你展示的自动化脚本演示视频在手机上能正常加载。",
   "main": "index.js",
- "scripts": {
+  "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check": "astro check"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,9 @@
   "dependencies": {
     "astro": "^6.1.8",
     "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.3"
   }
 }

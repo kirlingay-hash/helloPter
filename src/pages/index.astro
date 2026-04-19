@@ -1,10 +1,29 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Home</title>
-  </head>
-  <body>
-    <h1>Welcome</h1>
-    <p><a href="/blog/">Go to Blog</a></p>
-  </body>
-</html>
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from '../components/ArticleCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sortPosts } from '../lib/blog';
+import blogConfig from '../../blog.config.mjs';
+
+const posts = sortPosts(await getCollection('blog'));
+const featuredPosts = posts.slice(0, 6);
+---
+
+<BaseLayout title={blogConfig.siteName} description={blogConfig.description} canonicalPath="/">
+  <section class="hero section-stack">
+    <p class="section-note">Home</p>
+    <h1>{blogConfig.siteName}</h1>
+    <p class="page-intro">
+      这里按照参考仓库的方式补齐了博客首页、分类、标签、搜索、日期归档内容站。
+    </p>
+    <div class="site-nav">
+      <a href="/blog.html">Browse posts</a>
+      <a href="/sidebar.html">View sidebar</a>
+      <a href="/search.html">Search</a>
+    </div>
+  </section>
+
+  <section class="grid grid--cards">
+    {featuredPosts.map((post) => <ArticleCard post={post} />)}
+  </section>
+</BaseLayout>

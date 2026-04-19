@@ -6,10 +6,12 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.coerce.date(),
+    date: z.coerce.date(),
+    category: z.string(),
     author: z.string().optional(),
-    tags: z.array(z.string()).optional()
-  })
+    tags: z.array(z.string()).default([]),
+    cover: z.string().optional(),
+  }),
 });
 
 export const collections = { blog };

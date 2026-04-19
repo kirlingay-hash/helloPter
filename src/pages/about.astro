@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import blogConfig from '../../blog.config.mjs';
+---
+
+<BaseLayout
+  title="关于本站"
+  description="了解 Name6 Blog 的站点定位、内容范围与更新原则。"
+  canonicalPath="/about.html"
+>
+  <section class="hero section-stack">
+    <p class="section-note">About</p>
+    <h1 class="page-title">关于本站</h1>
+    <p class="page-intro">
+      {blogConfig.siteName} 主要整理 Instagram、Telegram 等社交平台上的内容增长、账号定位、互动质量和运营判断。
+    </p>
+  </section>
+
+  <article class="article-shell">
+    <h2>内容范围</h2>
+    <p>站内文章以公开可核验的信息、案例拆解和运营经验整理为主，重点关注增长逻辑、内容策略和用户信任形成过程。</p>
+
+    <h2>信息来源</h2>
+    <p>当主题涉及平台政策、产品机制或公开说明时，会优先引用官方文档和可验证来源；观点性内容会尽量写清判断前提与适用边界。</p>
+
+    <h2>更新原则</h2>
+    <p>如果平台规则或实践环境明显变化，相关页面会优先修订；若发现事实错误或表达不准确，也会尽快补充和修正。</p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Name6 Blog</title>
+  <desc id="desc">Social growth blog cover image</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="24" />
+  <g fill="#ffffff">
+    <text x="92" y="242" font-family="Segoe UI, Arial, sans-serif" font-size="42" opacity="0.88">Astro Content Architecture</text>
+    <text x="92" y="338" font-family="Segoe UI, Arial, sans-serif" font-size="82" font-weight="700">Name6 Blog</text>
+    <text x="92" y="410" font-family="Segoe UI, Arial, sans-serif" font-size="34" opacity="0.88">Categories, tags, search, archives and SEO-ready pages</text>
+  </g>
+</svg>
