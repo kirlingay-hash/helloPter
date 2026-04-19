@@ -11,10 +11,13 @@ const { post } = Astro.props;
 
 <article class="article-card">
   {post.data.cover && <img class="cover-image" src={post.data.cover} alt={post.data.title} loading="lazy" />}
-  <p class="section-note">{post.data.category} - {formatDate(post.data.date)}</p>
-  <h2><a href={getPostUrl(post)}>{post.data.title}</a></h2>
+  <p class="article-card__meta">{post.data.category} / {formatDate(post.data.date)}</p>
+  <h2 class="article-card__title"><a href={getPostUrl(post)}>{post.data.title}</a></h2>
   <p class="article-excerpt">{post.data.description}</p>
-  <div class="tag-list" aria-label="Tags">
-    {post.data.tags.map((tag) => <a class="tag" href={getTagUrl(tag)}>#{tag}</a>)}
+  <div class="article-card__footer">
+    <div class="tag-list" aria-label="Tags">
+      {post.data.tags.map((tag) => <a class="tag" href={getTagUrl(tag)}>#{tag}</a>)}
+    </div>
+    <a class="article-card__cta" href={getPostUrl(post)}>Read article</a>
   </div>
 </article>

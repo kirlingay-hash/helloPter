@@ -11,15 +11,15 @@ const featuredPosts = posts.slice(0, 6);
 
 <BaseLayout title={blogConfig.siteName} description={blogConfig.description} canonicalPath="/">
   <section class="hero section-stack">
-    <p class="section-note">Home</p>
+    <p class="eyebrow">Home Base</p>
     <h1>{blogConfig.siteName}</h1>
     <p class="page-intro">
-      这里按照参考仓库的方式补齐了博客首页、分类、标签、搜索、日期归档内容站。
+      聚焦社交平台增长、内容定位和账号运营，把文章、标签、检索与归档做成更利于探索的内容中枢。
     </p>
-    <div class="site-nav">
-      <a href="/blog.html">Browse posts</a>
-      <a href="/sidebar.html">View sidebar</a>
-      <a href="/search.html">Search</a>
+    <div class="hero-actions">
+      <a class="button-link" href="/blog.html">Browse posts</a>
+      <a class="button-link button-link--ghost" href="/sidebar.html">View sidebar</a>
+      <a class="button-link button-link--ghost" href="/search.html">Search</a>
     </div>
   </section>
 

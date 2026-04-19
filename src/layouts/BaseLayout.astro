@@ -29,13 +29,17 @@ const categories = [...new Set(posts.map((post) => post.data.category))];
       type={pageType}
     />
   </head>
-  <body>
+  <body class="site-shell">
     <header class="site-header">
       <div class="container site-header__stack">
         <div class="site-header__inner">
-          <a href="/">{blogConfig.siteName}</a>
+          <a class="brand-mark" href="/" aria-label={blogConfig.siteName}>
+            <span class="brand-mark__eyebrow">Growth Signals</span>
+            <span class="brand-mark__title">{blogConfig.siteName}</span>
+            <span class="brand-mark__subtitle">内容增长观察 / 结构化博客导航</span>
+          </a>
           <nav class="site-nav" aria-label="Primary">
-            <a href="/blog.html">Blog</a>
+            <a class="nav-cta" href="/blog.html">Blog</a>
             <a href={getCalendarUrl()} data-calendar-toggle aria-controls="calendar" aria-expanded="false">Calendar</a>
             <a href="/search.html">Search</a>
             <a href={getTagsUrl()}>Tags</a>
@@ -65,7 +69,10 @@ const categories = [...new Set(posts.map((post) => post.data.category))];
     <footer class="site-footer">
       <div class="container site-footer__inner">
         <div class="footer-copy">
-          <strong>{blogConfig.siteName}</strong>
+          <div class="brand-mark">
+            <span class="brand-mark__eyebrow">Signal Stack</span>
+            <strong class="brand-mark__title">{blogConfig.siteName}</strong>
+          </div>
           <p class="footer-note">
             聚焦公开可验证的社交平台增长观察、内容定位和账号运营经验，补齐站点的结构化导航、检索与归档能力。
           </p>

@@ -51,6 +51,7 @@ const { Content } = await render(entry);
         {entry.data.cover && (
           <img class="article-cover" src={entry.data.cover} alt={entry.data.title} loading="eager" />
         )}
+        <p class="eyebrow">{entry.data.category}</p>
         <h1 class="article-title">{entry.data.title}</h1>
         <ul class="article-meta">
           <li>{formatDate(entry.data.date)}</li>
