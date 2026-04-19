@@ -1,13 +1,11 @@
 * **总索引**
   * [首页入口](README.md)
 
+* **src/content/blog**
+  * [Buying Instagram Followers Creates a Shortcut to Numbers, Not to Trust](src/content/blog/Buying Instagram Followers Creates a Shortcut to Numbers, Not to Trust.md)
+  * [Growing a Telegram Channel as a Beginner Is Mostly an Exercise in Clarity](src/content/blog/Growing a Telegram Channel as a Beginner Is Mostly an Exercise in Clarity.md)
+
 * **买粉丝教程**
-  * [如何买 ins 粉丝](买粉丝教程/如何买ins粉丝.md)
-  * [X 刷粉如何操作](买粉丝教程/X刷粉如何操作.md)
-  * [Facebook 涨粉粉丝，如何买](买粉丝教程/Facebook涨粉粉丝，如何买.md)
-
-* **后续可扩展**
-  * 更多平台教程可继续补充到 `买粉丝教程` 目录
-
-hello world
-<https://www.nam6.com/>
+  * [Facebook涨粉粉丝，如何买](买粉丝教程/Facebook涨粉粉丝，如何买.md)
+  * [X刷粉如何操作](买粉丝教程/X刷粉如何操作.md)
+  * [如何买ins粉丝](买粉丝教程/如何买ins粉丝.md)
