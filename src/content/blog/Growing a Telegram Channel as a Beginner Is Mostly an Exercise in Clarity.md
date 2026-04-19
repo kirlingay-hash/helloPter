@@ -1,4 +1,11 @@
-#
+---
+title: "Growing a Telegram Channel as a Beginner Is Mostly an Exercise in Clarity"
+description: "That happens because channel owners focus too early on promotion and too little on identity. They ask how to get more members before they can answer a simpler question: what exactly should a new subscriber expect here that they would not get elsewhere?
+."
+pubDate: 2026-04-19
+author: "nam6"
+tags: ["seo", "Telegram"]
+---
 
 ## Introduction
 

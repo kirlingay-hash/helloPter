@@ -1,0 +1,24 @@
+{
+  "name": "github_name6.com",
+  "version": "1.0.0",
+  "description": "你展示的自动化脚本演示视频在手机上能正常加载。",
+  "main": "index.js",
+ "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github_nam6:kirlingay-hash/helloPter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "astro": "^6.1.8",
+    "zod": "^4.3.6"
+  }
+}
