@@ -1,6 +1,10 @@
 * **总索引**
   * [首页入口](README.md)
 
+* **src/blog**
+  * [Buying Instagram Followers Creates a Shortcut to Numbers, Not to Trust](src/blog/Buying Instagram Followers Creates a Shortcut to Numbers, Not to Trust.md)
+  * [Growing a Telegram Channel as a Beginner Is Mostly an Exercise in Clarity](src/blog/Growing a Telegram Channel as a Beginner Is Mostly an Exercise in Clarity.md)
+
 * **src/content/blog**
   * [Buying Instagram Followers Creates a Shortcut to Numbers, Not to Trust](src/content/blog/Buying Instagram Followers Creates a Shortcut to Numbers, Not to Trust.md)
   * [Growing a Telegram Channel as a Beginner Is Mostly an Exercise in Clarity](src/content/blog/Growing a Telegram Channel as a Beginner Is Mostly an Exercise in Clarity.md)
