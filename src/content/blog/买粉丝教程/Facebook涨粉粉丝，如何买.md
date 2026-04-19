@@ -4,7 +4,7 @@ description: "Facebook涨粉粉丝如何买？这篇新手教程按步骤说明 
 date: 2026-04-17
 category: "Facebook"
 author: "nam6"
-tags: ["seo", "Facebook"]
+tags: ["seo", "Facebook", "教程", "买粉丝教程"]
 ---
 
 ## Facebook涨粉粉丝，如何买
