@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { getCategoryUrl, getDateArchiveUrl, getDateArchives, getPostUrl, getTagUrl, getTagsUrl, sortPosts, toAbsoluteUrl } from '../lib/blog';
+import { getCategoryUrl, getDateArchiveUrl, getDateArchives, getPostUrl, getRssUrl, getTagUrl, getTagsUrl, sortPosts, toAbsoluteUrl } from '../lib/blog';
 
 export const GET: APIRoute = async () => {
   const posts = sortPosts(await getCollection('blog'));
@@ -13,6 +13,7 @@ export const GET: APIRoute = async () => {
     { loc: toAbsoluteUrl('/blog.html'), lastmod: undefined },
     { loc: toAbsoluteUrl('/search.html'), lastmod: undefined },
     { loc: toAbsoluteUrl(getTagsUrl()), lastmod: undefined },
+    { loc: toAbsoluteUrl(getRssUrl()), lastmod: undefined },
     { loc: toAbsoluteUrl('/sidebar.html'), lastmod: undefined },
     { loc: toAbsoluteUrl('/about.html'), lastmod: undefined },
     { loc: toAbsoluteUrl('/contact.html'), lastmod: undefined },

@@ -39,6 +39,10 @@ export function getTagsUrl() {
   return '/blog/tags.html';
 }
 
+export function getRssUrl() {
+  return '/rss.xml';
+}
+
 export function getSearchUrl() {
   return '/search.html';
 }
