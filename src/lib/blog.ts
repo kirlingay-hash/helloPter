@@ -15,6 +15,10 @@ export function sortPosts(posts: BlogEntry[]) {
 }
 
 export function getPostSlug(post: BlogEntry) {
+  if (post.data.slug) {
+    return post.data.slug;
+  }
+
   const source = post.id.split(/[\\/]/).pop() ?? post.id;
   return source
     .replace(/\.[^.]+$/, '')
